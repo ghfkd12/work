@@ -21,7 +21,7 @@ public class Ex02_Arrays {
 		
 		int[] arr = {1,6,2,3,10,7,4,5,8,9};
 		System.out.println(Arrays.toString(arr)); // 문자열로 감싸져있는 형태
-		
+		  
 		// 2. 배열의 정렬
 		// sort()
 		// 기본적으로 오름차순으로 정렬해준다.
