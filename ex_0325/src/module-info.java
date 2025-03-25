@@ -4,5 +4,5 @@
 /**
  * 
  */
-module ex05_Scanner {
+module ex_0325 {
 }
