@@ -1,5 +1,8 @@
 package ex03_class;
 
-public class Cat {
+// 자료형
+// String -> 참조 자료형
+// 참조자료형의 개수는 개발자가 임의로 만들 수 있어서 개수를 셀 수 없다.
+public class Cat { // 정의한 클래스도 참조 자료형이다.
 	
 }
