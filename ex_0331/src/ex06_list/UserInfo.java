@@ -29,7 +29,7 @@ public class UserInfo {
 		return id;
 	}
 	
-	public String getPw() {
+	public int getPw() {
 		return pw;
 	}
 	
