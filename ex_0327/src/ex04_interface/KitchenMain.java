@@ -2,18 +2,27 @@ package ex04_interface;
 
 public class KitchenMain {
 	public static void main(String[] args) {
+		
+		// 인터페이스는 객체를 직접 생성할 수 없다
+		// 인터페이스를 구현한 클래스의 객체를 생성한다.
+		
+		
+		
 		Kitchen k = new Kitchen();
 		
 		System.out.println("자장면 : "+k.jajang());
 		System.out.println("짬뽕 : "+k.JJamBBong());
 
-//		Menu1 m1 = new Kitchen();
-//		System.out.println("짜장면 : "+m1.jajang());
-//		System.out.println("짬뽕 : "+m1.JJamBBong());
-//		
-//		Menu2 m2 = new Kitchen();
-//		System.out.println("짜장면 : "+m2.jajang());
-//		System.out.println("짬뽕 : "+m2.JJamBBong());
+		
+		// 부모타입으로 자동 타입변환을 할 수 있다.
+		// 부모타입으로부터 만들어진 메서드만 사용할 수 있다.
+		Menu1 m1 = new Kitchen(); // 타입변환
+		System.out.println("짜장면 : "+m1.jajang());
+		System.out.println("짬뽕 : "+m1.JJamBBong());
+		
+		Menu2 m2 = new Kitchen();
+		System.out.println("짜장면 : "+m2.jajang());
+		System.out.println("짬뽕 : "+m2.JJamBBong());
 	}
 }
 
