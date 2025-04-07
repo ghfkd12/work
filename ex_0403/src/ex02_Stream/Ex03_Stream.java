@@ -5,11 +5,15 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Ex03_Stream {
 	public static void main(String[] args) {
+		// 최종연산
+		
 		// 1. forEach()
 		// 모든 요소에 대해 작업 수행(보통 출력용으로 많이 쓴다.)
 		// 출력하고 끝난다.
@@ -56,7 +60,7 @@ public class Ex03_Stream {
 		System.out.println(max.get());
 		
 		System.out.println("-----------------");
-		// 6. anyMatch()
+		// 6. anyMatch(조건)
 		// 하나라도 조건이 만족하는지
 		boolean hasShort = Stream.of("Java","Go","Python")
 								.anyMatch(s -> s.length() <= 2);
@@ -64,13 +68,16 @@ public class Ex03_Stream {
 		System.out.println("hasShort : "+hasShort);
 		System.out.println("-----------------");
 		
-		// 7. allMatch()
+		// 7. allMatch(조건)
 		// 모든 요소가 조건을 만족하는지 판별
 		boolean allLong = Stream.of("Java","Kotlin")
 								.allMatch(s -> s.length() >=4);
 				
 		System.out.println("allLong : "+ allLong);
 		System.out.println("-----------------");
+		
+		// noneMatch(조건)
+		// 모두 일치하지 않아야 true
 		
 		// 8. reduce()
 		// 스트림 요소를 누적해서 하나의 값으로 줄인다.(합계, 곱, 문자열 결합 등)
@@ -83,9 +90,17 @@ public class Ex03_Stream {
 		int sum = list.stream().reduce(0,(a,b)-> a+b);
 		System.out.println("list의 모든 요소의 총 합 : "+sum);
 		
+		// intStream과 같은 기본형 스트림에는 스트림의 요소들에 대한 통계 정보를
+		// 얻을 수 있는 메서드들이 있다.
 		
+		// sum()
 		
+		int sum2 = IntStream.of(1,2,3,4,5).sum();
 		
+		OptionalDouble res = IntStream.of(1,2,3,4,5).average();
+		System.out.println(res.getAsDouble());
+		
+		IntStream.of(1,2,3,4,5).min();
 		
 		
 		
