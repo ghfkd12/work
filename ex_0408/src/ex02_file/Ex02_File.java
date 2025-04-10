@@ -10,7 +10,7 @@ public class Ex02_File {
 		File f = new File(path);
 		
 		// isDirectory()
-		// 경로가 폴더인지 판별
+		// 경로의 최종목적지가 폴더면 true
 		if(f.isDirectory()) {
 			// list();
 			// 디렉토리안에있는 하위 요소들의 이름을 반환

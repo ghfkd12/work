@@ -9,7 +9,7 @@ public class Ex01_File {
 		File f = new File(path);
 		// File클래스의 객체가 생성되면서 path경로까지의 스트림을 생성
 		
-		// isFile() : 최종 목적지까지 갔을 때 파일인지 아닌지 판별
+		// isFile() : 최종 목적지까지 갔을 때 파일인지(파일이면 true) 아닌지 판별
 		System.out.println(1);
 		if(f.isFile()) {
 			System.out.println(2);
