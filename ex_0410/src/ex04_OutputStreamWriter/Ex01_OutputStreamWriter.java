@@ -7,7 +7,7 @@ public class Ex01_OutputStreamWriter {
 	public static void main(String[] args) {
 		
 		// 바이트 기반의 스트림은
-		// 문자열을 바티으배열로 변환한 후에 작성을 했어야 했다.
+		// 문자열을 바이트배열로 변환한 후에 작성을 했어야 했다.
 		// OutputStreamWriter의 경우 문자열을 바이트로 쉽게 변경을 해주는
 		// 보조스트림이다.
 		
