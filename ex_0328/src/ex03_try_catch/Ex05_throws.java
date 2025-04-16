@@ -12,8 +12,12 @@ public class Ex05_throws {
 		
 		if(check == 1) {
 			System.out.println("당신은 E입니다");
-		} else {
+		} else if(check == 2) {
 			System.out.println("당신은 I입니다.");
+		} else if(check != 1 || check != 2) {
+			System.out.println("잘못된 숫자입니다");
+		} else {
+			System.out.println("키보드 입력이 잘못되었습니다");
 		}
 	}
 	public static void main(String[] args) {
@@ -22,13 +26,13 @@ public class Ex05_throws {
 		// 메서드를 호출한 쪽에서 대신 처리해주는것
 		Scanner sc = new Scanner(System.in);
 		
-		try {
-			Ex05_throws.checkYoutself(sc);
-		} catch (Exception e) {
-			System.out.println("키보드 입력이 잘못되었습니다");
-		}finally {
-			System.out.println("프로그램 종료");
-		}
+//		try {
+//			Ex05_throws.checkYoutself(sc);
+//		} catch (Exception e) {
+//			System.out.println("키보드 입력이 잘못되었습니다");
+//		}finally {
+//			System.out.println("프로그램 종료");
+//		}
 //		Ex05_throws.checkYoutself(sc);// 예외가 발생할 확률이 있음
 	}
 }
